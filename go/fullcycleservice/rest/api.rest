@@ -1,0 +1,28 @@
+@baseURL = http://localhost:8000
+# @baseURL = http://localhost:5000
+###
+GET {{baseURL}}/api/modules
+###
+GET {{baseURL}}/api/modules?active=0
+###
+GET {{baseURL}}/api/modules?name=go
+###
+GET {{baseURL}}/api/modules/1
+###
+POST {{baseURL}}/api/modules
+
+{
+    "name": "XXX",
+    "active": true
+}
+
+###
+PUT {{baseURL}}/api/modules/22
+
+{
+    "name": "YYY",
+    "active": false
+}
+###
+DELETE {{baseURL}}/api/modules/24
+
